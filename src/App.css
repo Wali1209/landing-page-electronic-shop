@@ -1,0 +1,706 @@
+:root{
+    --primary :#fdf400;
+    --secondary:#acacac;
+}
+
+main{
+    width: 100%;
+    min-height: 100dvh;
+    background-image: url("./assets/background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+  }
+  nav.navbar {
+  padding: 3rem 8rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition:  0.32s ease-in-out;
+  text-transform: uppercase;
+  
+}
+
+nav.navbar.scrolled {
+  padding: 1rem ;
+  
+  
+}
+nav.navbar .navbar-brand img{
+  width: 60px;
+  height: 60px;
+}
+nav.navbar .navbar-nav{
+ margin-left: 2rem;
+}
+nav.navbar .navbar-nav .nav-link {
+  font-weight: 500;
+  color: #fff ;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  opacity: 0.75;
+  transition: all 0.2s ease;
+  padding-left: 8rem;
+}
+nav.navbar .navbar-nav a.nav-link:hover,
+nav.navbar .navbar-nav a.nav-link.active {
+    opacity: 1;
+    color: var(--primary);
+}
+form.search-form{
+  display: flex;
+  font-size: 1.5rem;
+  
+}
+form.search-form span a{
+  text-decoration: none;
+  color: #fff;
+  margin: 0 1rem;
+  user-select: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+form.search-form span a:hover{
+  color: var(--primary);
+}
+form.search-form input{
+  padding-left: .5rem;
+  border-radius: 5px;
+  border: none;
+  margin-right: .5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 0px;
+  opacity: 0;
+  transition: max-width 0.5s ease;
+}
+form.search-form input.search-active{
+  max-width: 50%;
+  width: 200px;
+  opacity: 1;
+  transition: max-width 0.5s ease;
+  
+}
+form.search-form input:focus{
+  border: none;
+  outline: 0;
+}
+form.search-form svg{
+  background-color: #fff;
+  display: block;
+  padding: 5px;
+  width: 30px;
+  height: auto;
+  padding: .5rem;
+  border-radius: 50%;
+
+}
+form.search-form svg:hover{
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+/* banner */
+.banner{
+  padding: 0 8rem;
+  padding-top: 18rem;
+  
+}
+.banner .banner-text .tagline{
+  font-size: 7rem;
+  font-weight: 600;
+  text-align: start;
+  line-height: 6rem;
+  color: var(--secondary);
+}
+.banner .banner-text .description span{
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  display: inline-block;
+}
+.banner .banner-text .description P{
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  width: 60%;
+  margin-bottom: 1rem;
+}
+.buttons{
+  width: 100%;
+}
+.buttons button{
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: .5rem 1rem ;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  font-weight: 500;
+  width: 20%;
+}
+.buttons button svg{
+  margin-left: .5rem;
+  font-size: 1.5rem;
+  transition: all .5s ease;
+}
+.buttons button:hover{
+  background-color: var(--primary);
+  color: #000;
+  border: 2px solid #000;
+}
+.buttons button:hover svg{
+  transform: translateX(.75rem);
+  transition: all 1s ease;
+}
+
+.banner .web-link{
+  margin-top: 5rem;
+
+
+}
+.banner .web-link a{
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.social-icons{
+  margin: .75rem 0;
+}
+.social-icon{
+  background-color: #fff;
+  padding: .5rem;
+  margin-left: .5rem;
+  font-size: .75rem;
+  border-radius: 50%;
+  text-align: center;
+}
+.social-icon:first-child{
+  margin-left: 0;
+}
+.social-icon:hover{
+  background-color: var(--primary);
+  transition: all 0.5s ease;
+}
+.banner-img  {
+  width: 100%;
+}
+.banner-img img{
+  width: 50rem;
+  margin-right: auto;
+}
+
+@media screen and (max-width:576px) {
+  nav.navbar{
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.75);
+
+  }
+  nav.navbar .navbar-nav{
+    margin: 2rem -2rem;
+    flex-direction: column;
+    justify-content: center;
+   }
+   nav.navbar .navbar-nav .nav-link {
+     font-weight: 500;
+     color: #fff ;
+     padding:.75rem 1.5rem;
+     font-size: 1rem;
+     opacity: 0.75;
+     transition: all 0.2s ease;
+     margin-bottom: .5rem;
+   }
+
+   form.search-form{
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+    
+   }
+   form.search-form input{
+    margin: 1rem 0;
+   }
+   form.search-form input{
+
+    
+    
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 50%;
+    opacity: 1;
+    transition: max-width 0.5s ease;
+  }
+
+   /* banner */
+.banner{
+  padding: 0 2rem;
+  padding-top: 18rem;  
+  padding-bottom: 2rem;
+}
+.banner .banner-text .tagline{
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: start;
+  line-height: 3.5rem;
+  color: var(--secondary);
+}
+.banner .banner-text .description span{
+  color: var(--primary);
+  font-size: 1rem;
+  margin: .5rem 0;
+  display: inline-block;
+}
+.banner .banner-text .description P{
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.buttons{
+  width: 100%;
+}
+.buttons button{
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: .5rem 1rem ;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.buttons button svg{
+  margin-left: .5rem;
+  font-size: 1.5rem;
+  transition: all .5s ease;
+}
+.buttons button:hover{
+  background-color: var(--primary);
+  color: #000;
+  border: 2px solid #000;
+}
+.buttons button:hover svg{
+  transform: translateX(.75rem);
+  transition: all 1s ease;
+}
+
+.banner .web-link{
+  margin-top: 5rem;
+
+
+}
+.banner .web-link a{
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.social-icons{
+  margin: .75rem 0;
+}
+.social-icon{
+  background-color: #fff;
+  padding: .5rem;
+  margin-left: .5rem;
+  font-size: .75rem;
+  border-radius: 50%;
+  text-align: center;
+}
+.social-icon:first-child{
+  margin-left: 0;
+}
+.social-icon:hover{
+  background-color: var(--primary);
+  transition: all 0.5s ease;
+}
+.banner-img  {
+  width: 100%;
+}
+.banner-img img{
+  width: 0;
+  display: none;
+}
+
+}
+
+@media screen and (max-width:768px) and (min-width:577px){
+  nav.navbar{
+    padding: 2rem;
+  }
+  nav.navbar .navbar-nav{
+    margin: 2rem;
+    flex-direction: row;
+    justify-content: center;
+   }
+   nav.navbar .navbar-nav .nav-link {
+     font-weight: 500;
+     color: #fff ;
+     padding: 0 2rem;
+     font-size: 1.25rem;
+     opacity: 0.75;
+     transition: all 0.2s ease;
+   }
+
+   form.search-form{
+    justify-content: center;
+ 
+   }
+
+
+   /* banner */
+.banner{
+  padding: 0 2rem;
+  padding-top: 18rem;  
+}
+.banner .banner-text .tagline{
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: start;
+  line-height: 3.5rem;
+  color: var(--secondary);
+}
+.banner .banner-text .description span{
+  color: var(--primary);
+  font-size: 1rem;
+  margin: .5rem 0;
+  display: inline-block;
+}
+.banner .banner-text .description P{
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.buttons{
+  width: 100%;
+}
+.buttons button{
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: .5rem 1rem ;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.buttons button svg{
+  margin-left: .5rem;
+  font-size: 1.5rem;
+  transition: all .5s ease;
+}
+.buttons button:hover{
+  background-color: var(--primary);
+  color: #000;
+  border: 2px solid #000;
+}
+.buttons button:hover svg{
+  transform: translateX(.75rem);
+  transition: all 1s ease;
+}
+
+.banner .web-link{
+  margin-top: 5rem;
+
+
+}
+.banner .web-link a{
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.social-icons{
+  margin: .75rem 0;
+}
+.social-icon{
+  background-color: #fff;
+  padding: .5rem;
+  margin-left: .5rem;
+  font-size: .75rem;
+  border-radius: 50%;
+  text-align: center;
+}
+.social-icon:first-child{
+  margin-left: 0;
+}
+.social-icon:hover{
+  background-color: var(--primary);
+  transition: all 0.5s ease;
+}
+.banner-img  {
+  width: 100%;
+}
+.banner-img img{
+  width: 0;
+ 
+  display: none;
+}
+
+}
+
+@media screen and (max-width:990px) and (min-width:770px){
+  nav.navbar{
+    padding: 4rem;
+  }
+  nav.navbar .navbar-nav{
+    margin: 2rem;
+    flex-direction: row;
+    justify-content: center;
+   }
+   nav.navbar .navbar-nav .nav-link {
+     font-weight: 500;
+     color: #fff ;
+     padding: 0 2rem;
+     font-size: 1.25rem;
+     opacity: 0.75;
+     transition: all 0.2s ease;
+   }
+
+   form.search-form{
+    justify-content: center;
+ 
+   }
+
+   /* banner */
+.banner{
+  padding: 0 2rem;
+  padding-top: 18rem;  
+}
+.banner .banner-text .tagline{
+  font-size: 7rem;
+  font-weight: 600;
+  text-align: start;
+  line-height: 6rem;
+  color: var(--secondary);
+}
+.banner .banner-text .description span{
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin: .5rem 0;
+  display: inline-block;
+}
+.banner .banner-text .description P{
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  width: 60%;
+  margin-bottom: 1rem;
+}
+.buttons{
+  width: 100%;
+}
+.buttons button{
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: .5rem 1rem ;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  font-weight: 500;
+  width: 40%;
+  margin-bottom: 1rem;
+}
+.buttons button svg{
+  margin-left: .5rem;
+  font-size: 1.5rem;
+  transition: all .5s ease;
+}
+.buttons button:hover{
+  background-color: var(--primary);
+  color: #000;
+  border: 2px solid #000;
+}
+.buttons button:hover svg{
+  transform: translateX(.75rem);
+  transition: all 1s ease;
+}
+
+.banner .web-link{
+  margin-top: 3rem;
+
+
+}
+.banner .web-link a{
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.social-icons{
+  margin: .75rem 0;
+}
+.social-icon{
+  background-color: #fff;
+  padding: .5rem;
+  margin-left: .5rem;
+  font-size: .75rem;
+  border-radius: 50%;
+  text-align: center;
+}
+.social-icon:first-child{
+  margin-left: 0;
+}
+.social-icon:hover{
+  background-color: var(--primary);
+  transition: all 0.5s ease;
+}
+.banner-img  {
+  width: 100%;
+}
+.banner-img img{
+  width: 0;
+  display: none;
+}
+
+}
+
+
+@media screen and (max-width:1200px) and (min-width:992px){
+  nav.navbar{
+    padding: 4rem;
+  }
+  nav.navbar .navbar-nav{
+    margin: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
+   }
+   nav.navbar .navbar-nav .nav-link {
+     font-weight: 500;
+     color: #fff ;
+     padding: 0 1.5rem;
+     font-size: 1rem;
+     opacity: 0.75;
+     transition: all 0.2s ease;
+   }
+
+   form.search-form{
+    justify-content: center;
+ 
+   }
+
+   /* banner */
+.banner{
+  padding: 0 2rem;
+  padding-top: 18rem;  
+}
+.banner .banner-text .tagline{
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: start;
+  line-height: 3.5rem;
+  color: var(--secondary);
+}
+.banner .banner-text .description span{
+  color: var(--primary);
+  font-size: 1rem;
+  margin: .5rem 0;
+  display: inline-block;
+}
+.banner .banner-text .description P{
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.buttons{
+  width: 100%;
+}
+.buttons button{
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: .5rem 1rem ;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  font-weight: 500;
+  width: 40%;
+  margin-bottom: 1rem;
+}
+.buttons button svg{
+  margin-left: .5rem;
+  font-size: 1.5rem;
+  transition: all .5s ease;
+}
+.buttons button:hover{
+  background-color: var(--primary);
+  color: #000;
+  border: 2px solid #000;
+}
+.buttons button:hover svg{
+  transform: translateX(.75rem);
+  transition: all 1s ease;
+}
+
+.banner .web-link{
+  margin-top: 4rem;
+
+
+}
+.banner .web-link a{
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.social-icons{
+  margin: .75rem 0;
+}
+.social-icon{
+  background-color: #fff;
+  padding: .5rem;
+  margin-left: .5rem;
+  font-size: .75rem;
+  border-radius: 50%;
+  text-align: center;
+}
+.social-icon:first-child{
+  margin-left: 0;
+}
+.social-icon:hover{
+  background-color: var(--primary);
+  transition: all 0.5s ease;
+}
+.banner-img  {
+  width: 100%;
+}
+
+
+}
+
+@media screen and (min-width:1200px) {
+  nav.navbar{
+    padding: 3rem 8rem;
+  }
+  nav.navbar .navbar-nav{
+    margin: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
+   }
+   nav.navbar .navbar-nav .nav-link {
+     font-weight: 500;
+     color: #fff ;
+     padding-left: 5rem;
+     font-size: 1rem;
+     opacity: 0.75;
+     transition: all 0.2s ease;
+   }
+
+   form.search-form{
+    justify-content: center;
+ 
+   }
+   .buttons button{
+    width: 30%;
+   }
+}
+
